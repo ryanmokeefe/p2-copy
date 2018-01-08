@@ -1,0 +1,29 @@
+{{#if resource}}
+
+<main class="container">
+    <h2>{{resource.name}}</h2>
+    <p>{{resource.subject}}</p>
+    <p>{{resource.type}}</p>
+    <p>{{resource.videos}}</p>
+    <p>{{resource.exercises}}</p>
+    <p>{{resource.votes}}</p>
+
+    <div class="question">
+        {{#each resource.questions as |resource.question index|}}
+            <h3>{{resource.question.title}}</h3>
+            <p>{{resource.question.question}}</p>
+            <p>{{resource.question.creator}}</p>
+            <p>{{resource.question.date}}</p>
+            {{!-- make votes incremental --}}
+                {{#each resource.question.answers as |resource.question.answer index|}}
+                <p class="answer">{{resource.question.answer.answer}}</p>
+                <p>{{resource.question.answer.creator}}</p>
+                <p>{{resource.question.answer.date}}</p>
+                <p>{{resource.question.answer.votes}}</p>
+                {{/each}}
+        {{/each}}
+    </div>
+{{else}}
+<h2>Couldn't find resource page.</h2>
+{{/if}}
+</main>

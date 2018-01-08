@@ -1,0 +1,47 @@
+!doctype <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Additional Resources</title>
+</head>
+<body>
+    <h1>
+        <a href="/">Additional Resources</a>
+    </h1>
+
+     <nav class="navbar navbar-default">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">News Now</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="user-menu">
+          <ul class="nav navbar-nav">
+            {{!-- adding if statement, if user is logged in --}}
+            {{#if currentUser}}
+              <li><a href="/logout">Logout {{currentUser.local.email}}</a></li>
+            {{else}}
+              <li><a href="/login">Login</a></li>
+              <li><a href="/signup">Signup</a></li>
+            {{/if}}  
+            <li><a href="/secret">User pages</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+    <main class="container">
+        {{{body}}}
+    </main>
+</body>
+</html>

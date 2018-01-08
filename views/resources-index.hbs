@@ -1,0 +1,34 @@
+<h2>{{resource}}</h2>
+{{#each resources as |resource index|}}
+<h3>
+    <a href="/resources/{{resource.name}}">{{resource.name}} {{resource.bubject}} {{resource.url}}</a>
+</h3>
+{{/each}}
+
+<form action="/resources" method="post">
+    <input type="text" name="resources[name]" placeholder="Title" />
+    <input type="text" name="resources[subject]" placeholder="Subject" />
+    <input type="text" name="resources[url]" placeholder="Website Url" />
+
+<input list="type">
+  <datalist id="resourceType">
+    <option value="Article">
+    <option value="Lesson">
+    <option value="Lecture">
+    <option value="Documentation">
+    <option value="Podcast">
+  </datalist> 
+<input list="videos">
+  <datalist id="Videos">
+    <option value="Yes">
+    <option value="No">
+  </datalist> 
+<input list="exercises">
+  <datalist id="exercises">
+    <option value="Yes">
+    <option value="No">
+  </datalist> 
+
+
+    <input type="submit" value="Run for Office" />
+</form>
