@@ -43,8 +43,8 @@ function getLogout(request, response) {
 }
 
 // Restricted page
-function secret(request, response){
-  response.render("secret.hbs");
+function profile(request, response){
+  response.render("profile.hbs");
 }
 
 module.exports = {
@@ -53,5 +53,5 @@ module.exports = {
   getSignup: getSignup,
   postSignup: postSignup,
   getLogout: getLogout,
-  secret: secret
+  profile: profile
 }

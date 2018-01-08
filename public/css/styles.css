@@ -1,6 +1,58 @@
 body {
     background: rgb(41, 41, 41);
+    color: whitesmoke;
+    margin: 0 0 50px 0;
 }
 .nav-wrapper {
     background-color: rgb(72, 167, 167);
+}
+a {
+    color: rgb(247, 152, 74);
+    letter-spacing: 1px;
+}
+h2 {
+    font-size: 30px;
+}
+h4 {
+    font-size: 20px;
+
+}
+.col {
+   height: 80px; 
+   border: 3px solid black;
+   letter-spacing: 1px;
+   object-fit: contain;
+   overflow: auto;
+}
+td {
+    padding: 0 0 0 20px;
+}
+table {
+    margin: 50px auto;
+    /* padding: 20px; */
+}
+/* table.striped tr {
+    background-color: #444 !important;
+} */
+tr:nth-child(odd)		{ background-color:#222; }
+tr:nth-child(even)		{ background-color:#555; }
+table.highlight tbody tr:hover {
+    color: #444 !important;
+    background-color: #eee;
+}
+.submit {
+    height: 50px;
+    width: 30%;
+    color: #444;
+    margin: 15px 35%;
+    background-color: #eee;
+    font-weight: 900;
+    font-size: 20px;
+}
+.submit:hover {
+    background-color: #444;
+    color: #eee;
+}
+.text-shadow {
+    text-shadow: 2px 2px 2px #111;
 }

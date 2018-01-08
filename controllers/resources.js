@@ -42,9 +42,9 @@ Router.route('/login')
 Router.route("/logout")
 .get(usersController.getLogout)
 
-// adds route for secret page IF user is authenticated:
-Router.route("/secret")
-.get(authenticatedUser, usersController.secret)
+// adds route for profile page IF user is authenticated:
+Router.route("/profile")
+.get(authenticatedUser, usersController.profile)
 
 // get one by name:
 Router.get('/:name', (req, res) => {

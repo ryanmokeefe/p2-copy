@@ -3,3 +3,7 @@
 
 $(".button-collapse").sideNav();
 
+
+$('.carousel').carousel();
+
+// $('#grid .row:nth-child(odd)').addClass('alternate');

@@ -1,0 +1,77 @@
+<!-- from resources-show.hbs -->
+{{#if question}}
+<div class="question">
+    {{#each resource.questions as |resource.question index|}}
+        <h3>{{resource.question.title}}</h3>
+        <p>{{resource.question.question}}</p>
+        <p>{{resource.question.creator}}</p>
+        <p>{{resource.question.date}}</p>
+        {{!-- make votes incremental --}}
+        {{#if answer}}
+            {{#each resource.question.answers as |resource.question.answer index|}}
+            <p class="answer">{{resource.question.answer.answer}}</p>
+            <p>{{resource.question.answer.creator}}</p>
+            <p>{{resource.question.answer.date}}</p>
+            <p>{{resource.question.answer.votes}}</p>
+            {{/each}}
+        {{/if}}
+    {{/each}}
+</div>
+{{/if}}
+
+
+<!-- from resources-index.hbs -->
+
+<!-- Add datalist dropdown menus for: -->
+
+<input list="type">
+  <datalist id="resourceType">
+    <option value="Article">
+    <option value="Lesson">
+    <option value="Lecture">
+    <option value="Documentation">
+    <option value="Podcast">
+  </datalist> 
+<input list="videos">
+  <datalist id="Videos">
+    <option value="Yes">
+    <option value="No">
+  </datalist> 
+<input list="exercises">
+  <datalist id="exercises">
+    <option value="Yes">
+    <option value="No">
+  </datalist> 
+
+
+<!-- WORKING RESOURCES-INDEX GRID-->
+<h2>{{resource}}</h2>
+<div class="row striped">
+  {{#each resources as |resource index|}}
+    <div class="col s4">
+      <h3>
+        <a href="/resources/{{resource.name}}">{{resource.name}}</a> 
+      </h3>    
+    </div>
+    <div class="col s4">
+      {{resource.subject}} 
+    </div>
+    <div class="col s4">
+      <a href="{{resource.url}}">{{resource.url}}</a>
+    </div>
+  
+  {{/each}}
+</div>
+<form action="/resources" method="post">
+  <input type="text" name="resources[name]" placeholder="Title" />
+  <input type="text" name="resources[subject]" placeholder="Subject" />
+  <input type="text" name="resources[url]" placeholder="Website Url" />
+  <input type="text" name="resources[Type]" placeholder="Lesson, Article, Lecture, Documentation, Podcast, etc." />
+  <input type="text" name="resources[videos]" placeholder="Videos? (Yes/No)" />
+  <input type="text" name="resources[exercises]" placeholder="Exercises? (Yes/No)" />
+
+
+
+
+  <input type="submit" value="Upload Resource" />
+</form>
