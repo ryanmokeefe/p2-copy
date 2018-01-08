@@ -1,13 +1,13 @@
-!doctype <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-    <link rel="stylesheet" href="/assests/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/styles.css">
+      
     <title>Additional Resources</title>
 </head>
 <body>
@@ -15,23 +15,14 @@
         <a href="/">Additional Resources</a>
     </h1>
 
-     <nav class="navbar navbar-default">
-      <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="/">News Now</a>
-        </div>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="user-menu">
-          <ul class="nav navbar-nav">
-            {{!-- adding if statement, if user is logged in --}}
+
+
+    <nav>
+        <div class="nav-wrapper">
+          <a href="#!" class="brand-logo">Logo</a>
+          <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+          <ul class="right hide-on-med-and-down">
             {{#if currentUser}}
               <li><a href="/logout">Logout {{currentUser.local.email}}</a></li>
             {{else}}
@@ -40,12 +31,24 @@
             {{/if}}  
             <li><a href="/secret">User pages</a></li>
           </ul>
-        </div><!-- /.navbar-collapse -->
-      </div><!-- /.container-fluid -->
-    </nav>
+          <ul class="side-nav" id="mobile-demo">
+            {{#if currentUser}}
+              <li><a href="/logout">Logout {{currentUser.local.email}}</a></li>
+            {{else}}
+              <li><a href="/login">Login</a></li>
+              <li><a href="/signup">Signup</a></li>
+            {{/if}}  
+            <li><a href="/secret">User pages</a></li>
+          </ul>
+        </div>
+      </nav>
 
     <main class="container">
         {{{body}}}
     </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+    <script src="/assets/main.js"></script>
 </body>
 </html>

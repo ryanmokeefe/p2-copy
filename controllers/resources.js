@@ -3,6 +3,8 @@ const express = require('express')
 const Resource = require('../models/resource-schema')
 const Question = require('../models/question-schema')
 const Answer = require('../models/answer-schema')
+var usersController = require('../controllers/users');
+
 const Router = express.Router()
 
 // function for authenticated user:
@@ -29,19 +31,19 @@ Router.get('/', (req, res) => {
 })
 
 // routes for user (from passport)
-router.route('/signup')
+Router.route('/signup')
 .get(usersController.getSignup)
 .post(usersController.postSignup)
 
-router.route('/login')
+Router.route('/login')
 .get(usersController.getLogin)
 .post(usersController.postLogin)
 
-router.route("/logout")
+Router.route("/logout")
 .get(usersController.getLogout)
 
 // adds route for secret page IF user is authenticated:
-router.route("/secret")
+Router.route("/secret")
 .get(authenticatedUser, usersController.secret)
 
 // get one by name:

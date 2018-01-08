@@ -1,7 +1,7 @@
 <h2>{{resource}}</h2>
 {{#each resources as |resource index|}}
 <h3>
-    <a href="/resources/{{resource.name}}">{{resource.name}} {{resource.bubject}} {{resource.url}}</a>
+    <a href="/resources/{{resource.name}}">{{resource.name}} {{resource.subject}} {{resource.url}}</a>
 </h3>
 {{/each}}
 
@@ -9,7 +9,12 @@
     <input type="text" name="resources[name]" placeholder="Title" />
     <input type="text" name="resources[subject]" placeholder="Subject" />
     <input type="text" name="resources[url]" placeholder="Website Url" />
+    <input type="text" name="resources[Type]" placeholder="Lesson, Article, Lecture, Documentation, Podcast, etc." />
+    <input type="text" name="resources[videos]" placeholder="Videos? (Yes/No)" />
+    <input type="text" name="resources[exercises]" placeholder="Exercises? (Yes/No)" />
 
+{{!-- Add datalist dropdown menus for: --}}
+{{!-- 
 <input list="type">
   <datalist id="resourceType">
     <option value="Article">
@@ -27,8 +32,8 @@
   <datalist id="exercises">
     <option value="Yes">
     <option value="No">
-  </datalist> 
+  </datalist>  --}}
 
 
-    <input type="submit" value="Run for Office" />
+    <input type="submit" value="Upload Resource" />
 </form>

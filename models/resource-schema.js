@@ -12,13 +12,10 @@ const ResourceSchema = new mongoose.Schema({
     videos: String,
     exercises: String,
     votes: Number,
-    questions: [{
-        type: Schema.Types.ObjectId,  //REFERENCING :D
-        ref: 'Question'
-      }]
+    questions: []
     // notes: [NoteSchema]
 })
 
 const Resource = mongoose.model('Resource', ResourceSchema)
 
-module.exports = Question
+module.exports = Resource
