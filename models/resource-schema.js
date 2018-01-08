@@ -12,7 +12,10 @@ const ResourceSchema = new mongoose.Schema({
     videos: String,
     exercises: String,
     votes: Number,
-    questions: [QuestionSchema],
+    questions: [{
+        type: Schema.Types.ObjectId,  //REFERENCING :D
+        ref: 'Question'
+      }]
     // notes: [NoteSchema]
 })
 

@@ -1,9 +1,12 @@
 const mongoose = require('../db/connection')
-const UserSchema = require('./user-schema')
+const User = require('./user-schema')
 
 const AnswerSchema = new mongoose.Schema({
     answer: String,
-    creator: [UserSchema],
+    creator: [{
+        type: Schema.Types.ObjectId,  //REFERENCING :D
+        ref: 'User'
+      }],
     date: {type: Date, default: Date.now},
     votes: Number
 })

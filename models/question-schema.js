@@ -6,9 +6,15 @@ const AnswerSchema = require('./answer-schema')
 const QuestionSchema = new mongoose.Schema({
     title: String,
     question: String,
-    creator: [UserSchema],
+    creator: [{
+        type: Schema.Types.ObjectId,  //REFERENCING :D
+        ref: 'User'
+      }],
     date: {type: Date, default: Date.now},
-    answers: [AnswerSchema]
+    answers: [{
+        type: Schema.Types.ObjectId,  //REFERENCING :D
+        ref: 'Answer'
+      }]
 })
 
 const Question = mongoose.model('Question', QuestionSchema)
