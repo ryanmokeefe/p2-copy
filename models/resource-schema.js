@@ -1,5 +1,7 @@
 const mongoose = require('../db/connection')
 // do I need to require all other schemas being used?
+const QuestionSchema = require('./question-schema')
+// const NoteSchema = require('./question-schema')
 
 
 const ResourceSchema = new mongoose.Schema({
@@ -11,9 +13,9 @@ const ResourceSchema = new mongoose.Schema({
     exercises: String,
     votes: Number,
     questions: [QuestionSchema],
-    notes: [NotesSchema]
+    // notes: [NoteSchema]
 })
 
-const Resource = mongoose,model('Resource', ResourceSchema)
+const Resource = mongoose.model('Resource', ResourceSchema)
 
 module.exports = Question
