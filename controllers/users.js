@@ -34,7 +34,7 @@ function getSignup(req, res, next) {
 // POST /signup
 function postSignup(req, res, next) {
   // local signup has to match the local signup in passport.use export: **********************
-  var signupStrategy = passport.authenticate('/local-signup', {
+  var signupStrategy = passport.authenticate('local-signup', {
     successRedirect : '/',
     failureRedirect : '/signup',
     failureFlash : true

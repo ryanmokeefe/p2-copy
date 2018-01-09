@@ -11,17 +11,25 @@
     <title>Additional Resources</title>
 </head>
 <body>
-    <h1 class="">
-        <a href="/">Additional Resources</a>
-    </h1>
+
 
 
 
 
     <nav>
         <div class="nav-wrapper">
-          <a href="#!" class="brand-logo">Logo</a>
-          <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+          <div class="nav-left left">
+            <a href="#!" class="brand-logo">AR[ ]</a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+
+            <ul id="dropdown1" class="dropdown-content">
+              <li><a href="#!">thing</a></li>
+              <li><a href="#!">thing</a></li>
+              <li><a href="#!">thing</a></li>
+            </ul>
+            <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Dropdown<i class="material-icons left">arrow_drop_down</i></a></li>
+          </div>
+          
           <ul class="right hide-on-med-and-down">
             {{#if currentUser}}
               <li><a href="/logout">Logout {{currentUser.local.email}}</a></li>
@@ -40,6 +48,14 @@
             {{/if}}  
             <li><a href="/profile">Profile</a></li>
           </ul>
+
+
+              <div class="navpart-2 left">                
+                <h1 class="center">
+                  <a class="header-ar" href="/">Additional Resources</a>
+                </h1>
+              </div>
+
         </div>
       </nav>
 

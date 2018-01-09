@@ -2,14 +2,47 @@ body {
     background: rgb(41, 41, 41);
     color: whitesmoke;
     margin: 0 0 50px 0;
+    display: block;
+
 }
-.nav-wrapper {
+
+/* nav bar */
+
+.brand-logo {
+    margin: 0 10px;
+}
+.nav-left {
+    display: inline;
+}
+nav {
     background-color: rgb(72, 167, 167);
+    margin: 0;
+    height: 200px !important;
+    padding: 0;
+}
+ul {
+    margin: 0;
+    padding: 0;
+}
+nav a {
+    margin: 0;
+    padding: 0;
 }
 a {
     color: rgb(247, 152, 74);
     letter-spacing: 1px;
 }
+h1 {
+    /* background-color: #111; */
+    margin: 0 auto;
+    font-size: 30px;
+}
+/*  */
+
+.header-ar {
+    margin: 0 20px;
+}
+
 h2 {
     font-size: 30px;
 }
@@ -55,4 +88,7 @@ table.highlight tbody tr:hover {
 }
 .text-shadow {
     text-shadow: 2px 2px 2px #111;
+}
+.carousel {
+    margin: 0;
 }
