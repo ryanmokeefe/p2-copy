@@ -16,20 +16,13 @@
 
 
 
-    <nav>
+    <nav class="nav-extended">
               
                 <div class="nav-wrapper">
                   <div class="nav-left left">
                     <a href="#!" class="brand-logo">AR[ ]</a>
                     <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-{{!-- <div class="dropdown1"> --}}
-                    {{!-- <ul id="dropdown1" class="dropdown-content">
-                      <li><a href="#!">thing</a></li>
-                      <li><a href="#!">thing</a></li>
-                      <li><a href="#!">thing</a></li>
-                    </ul>
-                    <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Dropdown<i class="material-icons left">arrow_drop_down</i></a></li>
-                  </div> --}}
+
                   </div>        
           <ul class="right hide-on-med-and-down">
             {{#if currentUser}}
@@ -51,11 +44,26 @@
           </ul>
 
 
-              <div class="navpart-2 valign center">                
-                <h1 class="center">
-                  <a class="header-ar" href="/">Additional Resources</a>
-                </h1>
-              </div>
+        </div>
+{{!-- moved from below nav-content --}}
+
+        <div class="nav-wrapper navpart-2">                
+          <h1 class="center">
+            <a class="header-ar center" href="/">Additional Resources</a>
+          </h1>
+        </div>
+
+{{!--  --}}
+        <div class="nav-content">
+          <ul class="">
+            <li class=""><a href="#test1">Test 1</a></li>
+            <li class=""><a class="active" href="#test2">Test 2</a></li>
+            <li class=""><a href="#test3">Disabled Tab</a></li>
+            <li class=""><a href="#test4">Test 4</a></li>
+          </ul>
+
+
+
 
         </div>
 
@@ -71,3 +79,7 @@
     <script src="/assets/main.js"></script>
 </body>
 </html>
+
+{{!--  --}}
+
+
