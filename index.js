@@ -10,7 +10,7 @@ var flash        = require('connect-flash');
 var morgan       = require('morgan');
 var cookieParser = require('cookie-parser');
 var session      = require('express-session');
-
+const userController = require('./controllers/users.js')
 
 app.use(morgan('dev')); 
 app.use(cookieParser());
@@ -38,10 +38,17 @@ app.use(flash());
 
 require('./configs/passport')(passport);
 
+// use passport for current user
+app.use(function (req, res, next) {
+    res.locals.currentUser = req.user;
+    next();
+  });
 
 app.get('/', (req, res) => {
     res.render('welcome')
 })
+
 app.use('/resources', controller)
+app.use('/', userController)
 
 app.listen(app.get('port'), console.log(`✅ PORT ${app.get('port')} 🌟`))

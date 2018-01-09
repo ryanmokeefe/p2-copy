@@ -1,7 +1,31 @@
+const router = require('express').Router()
+
 // all from passport lesson
 
 var passport = require("passport")
+router.route('/signup')
+.get(getSignup)
+.post(postSignup)
 
+router.route('/login')
+.get(getLogin)
+.post(postLogin)
+
+router.route("/logout")
+.get(getLogout)
+
+// function for authenticated user:
+function authenticatedUser(req, res, next) {
+  // If the user is authenticated, then we continue the execution
+  if (req.isAuthenticated()) return next();
+
+  // Otherwise the request is always redirected to the home page
+  res.redirect('/');
+}
+
+// adds route for profile page IF user is authenticated:
+router.route("/profile")
+.get(authenticatedUser, profile)
 // GET /signup
 function getSignup(req, res, next) {
   res.render('signup.hbs', { message: req.flash('signupMessage') });
@@ -10,7 +34,7 @@ function getSignup(req, res, next) {
 // POST /signup
 function postSignup(req, res, next) {
   // local signup has to match the local signup in passport.use export: **********************
-  var signupStrategy = passport.authenticate('local-signup', {
+  var signupStrategy = passport.authenticate('/local-signup', {
     successRedirect : '/',
     failureRedirect : '/signup',
     failureFlash : true
@@ -47,11 +71,13 @@ function profile(req, res){
   res.render("profile.hbs");
 }
 
-module.exports = {
-  getLogin: getLogin,
-  postLogin: postLogin,
-  getSignup: getSignup,
-  postSignup: postSignup,
-  getLogout: getLogout,
-  profile: profile
-}
+// module.exports = {
+//   getLogin: getLogin,
+//   postLogin: postLogin,
+//   getSignup: getSignup,
+//   postSignup: postSignup,
+//   getLogout: getLogout,
+//   profile: profile
+// }
+
+module.exports = router

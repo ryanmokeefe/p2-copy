@@ -10,7 +10,11 @@ const ResourceSchema = new mongoose.Schema({
     type: String,
     url: String,
     videos: String,
-    exercises: String
+    exercises: String,
+    votes: Number,
+    questions: [],
+    notes: []
+    
 })
 
 const Resource = mongoose.model('Resource', ResourceSchema)
