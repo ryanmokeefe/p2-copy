@@ -14,7 +14,7 @@ var session      = require('express-session');
 
 app.use(morgan('dev')); 
 app.use(cookieParser());
-app.use(parser()); 
+// app.use(parser()); 
 
 app.use(methodOverride('_method'))
 app.use('/assets', express.static('public'))

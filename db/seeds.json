@@ -5,10 +5,7 @@
         "type": "Article",
         "url": "https://robots.thoughtbot.com/sandi-metz-rules-for-developers",
         "videos": "No",
-        "exercises": "No",
-        "votes": 0,
-        "questions": [],
-        "notes": []
+        "exercises": "No"    
     },
     {
         "name": "Free Code Camp",
@@ -16,10 +13,7 @@
         "type": "Lesson",
         "url": "https://www.freecodecamp.org",
         "videos": "No",
-        "exercises": "Yes",
-        "votes": 0,
-        "questions": [],
-        "notes": []
+        "exercises": "Yes"
     },
     {
         "name": "Node School",
@@ -27,10 +21,7 @@
         "type": "Lesson",
         "url": "https://nodeschool.io/#workshoppers",
         "videos": "No",
-        "exercises": "Yes",
-        "votes": 0,
-        "questions": [],
-        "notes": []
+        "exercises": "Yes"
     },
     {
         "name": "Eric Ries-Evangelizing for the Lean Startup",
@@ -38,10 +29,7 @@
         "type": "Lecture",
         "url": "https://www.youtube.com/watch?v=joViUzhTDk0&t=1474s",
         "videos": "Yes",
-        "exercises": "No",
-        "votes": 0,
-        "questions": [],
-        "notes": []
+        "exercises": "No"
     },
     {
         "name": "Managing Mongod Processes",
@@ -49,10 +37,7 @@
         "type": "Documentation",
         "url": "https://docs.mongodb.com/manual/tutorial/manage-mongodb-processes/",
         "videos": "No",
-        "exercises": "No",
-        "votes": 0,
-        "questions": [],
-        "notes": []
+        "exercises": "No"
     },
     {
         "name": "The Changelog",
@@ -60,10 +45,7 @@
         "type": "Podcast",
         "url": "https://changelog.com/podcast",
         "videos": "No",
-        "exercises": "No",
-        "votes": 0,
-        "questions": [],
-        "notes": []
+        "exercises": "No"
     }
 
 ]

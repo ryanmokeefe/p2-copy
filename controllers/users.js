@@ -3,12 +3,12 @@
 var passport = require("passport")
 
 // GET /signup
-function getSignup(request, response, next) {
-  response.render('signup.hbs', { message: request.flash('signupMessage') });
+function getSignup(req, res, next) {
+  res.render('signup.hbs', { message: req.flash('signupMessage') });
 }
 
 // POST /signup
-function postSignup(request, response, next) {
+function postSignup(req, res, next) {
   // local signup has to match the local signup in passport.use export: **********************
   var signupStrategy = passport.authenticate('local-signup', {
     successRedirect : '/',
@@ -16,40 +16,40 @@ function postSignup(request, response, next) {
     failureFlash : true
   });
 
-  return signupStrategy(request, response, next);
+  return signupStrategy(req, res, next);
 }
 
 // GET /login
 
-function getLogin(request, response, next) {
-  response.render('login.hbs', { message: request.flash('loginMessage') });
+function getLogin(req, res, next) {
+  res.render('login.hbs', { message: req.flash('loginMessage') });
 }
 
 // POST /login (if verification was a success, allow entry):
-function postLogin(request, response, next) {
+function postLogin(req, res, next) {
   var loginProperty = passport.authenticate('local-login', {
     successRedirect : '/',
     failureRedirect : '/login',
     failureFlash : true
   });
 
-  return loginProperty(request, response, next);
+  return loginProperty(req, res, next);
 }
 
 // GET /logout
-function getLogout(request, response) {
-  request.logout();
-  response.redirect('/');
+function getLogout(req, res) {
+  req.logout();
+  res.redirect('/');
 }
 
 // Restricted page
-function profile(request, response){
-  response.render("profile.hbs");
+function profile(req, res){
+  res.render("profile.hbs");
 }
 
 module.exports = {
   getLogin: getLogin,
-  postLogin: postLogin ,
+  postLogin: postLogin,
   getSignup: getSignup,
   postSignup: postSignup,
   getLogout: getLogout,
