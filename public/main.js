@@ -18,3 +18,5 @@ function autoplay() {
     setTimeout(autoplay, 4500);
 }
 // $('#grid .row:nth-child(odd)').addClass('alternate');
+
+$(".dropdown-button").dropdown();

@@ -51,4 +51,7 @@ app.get('/', (req, res) => {
 app.use('/resources', controller)
 app.use('/', userController)
 
-app.listen(app.get('port'), console.log(`✅ PORT ${app.get('port')} 🌟`))
+  app.listen(app.get('port'), () => {
+    console.log(`✅ PORT: ${app.get('port')} 🌟`)
+  })
+
