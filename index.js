@@ -51,6 +51,9 @@ app.get('/', (req, res) => {
 app.use('/resources', controller)
 app.use('/', userController)
 
+// const io = require('socket.io').listen(server);
+// io.sockets.on('connection', routes.vote);
+
   app.listen(app.get('port'), () => {
     console.log(`✅ PORT: ${app.get('port')} 🌟`)
   })

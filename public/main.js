@@ -4,19 +4,24 @@
 $(".button-collapse").sideNav();
 
 
-// $('.carousel').carousel();
+// autoplay()   
+// function autoplay() {
+//     $('.carousel').carousel('next');
+//     setTimeout(autoplay, 4500);
+// }
 
-// $('.carousel').carousel({
-//     padding: 200    
-// });
-$('.carousel.carousel-slider').carousel({fullWidth: true});
-
-
-autoplay()   
-function autoplay() {
-    $('.carousel').carousel('next');
-    setTimeout(autoplay, 4500);
-}
+$('.carousel.carousel-slider').carousel({
+    fullWidth: true,
+    indicators: true
+  });
 // $('#grid .row:nth-child(odd)').addClass('alternate');
 
 $(".dropdown-button").dropdown();
+
+/////////
+
+// $('#voteUp').on('click', () => {
+//     var resource = $('resource.votes')
+// })
+var resource = $('resource.votes')
+console.log(resource)

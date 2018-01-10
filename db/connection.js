@@ -8,14 +8,14 @@ if (process.env.NODE_ENV == "production") {
     mongoose.connect("mongodb://localhost/project-2");
   }
 
-
-// mongoose.connect('mongodb://localhost/project-2')
-// .then(() => {
-//     console.log(`Connection Established to DB`)
-// })
-//     .catch((err) => {
-//         console.log('Connection Failed!', error)
-// })
-
-mongoose.Promise = Promise
-module.exports = mongoose
+  
+  mongoose.Promise = Promise
+  module.exports = mongoose
+  
+  // mongoose.connect('mongodb://localhost/project-2')
+  // .then(() => {
+  //     console.log(`Connection Established to DB`)
+  // })
+  //     .catch((err) => {
+  //         console.log('Connection Failed!', error)
+  // })

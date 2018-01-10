@@ -1,6 +1,7 @@
   <table class="z-depth-5 highlight">
     <thead>
           <tr>
+              <th class="center">Rating</th>
               <th class="center">Name</th>
               <th class="center">Subject</th>
               <th class="center">Website</th>
@@ -9,6 +10,9 @@
       <tbody>
         {{#each resources as |resource index|}}
         <tr>
+          <td>
+            <div class="votes">{{resource.votes}}</div>
+          </td>
           <td>
             <h4>
               <a href="/resources/{{resource.name}}">{{resource.name}}</a> 
