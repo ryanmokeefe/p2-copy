@@ -112,7 +112,9 @@ tr:hover a {
 /* carousel */
 
 .carousel {
-    margin: 25px 0;
+    margin: 25px auto;
+    max-width: 900px;
+
 
 }
 .car1 {
