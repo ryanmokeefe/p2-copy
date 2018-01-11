@@ -1,6 +1,6 @@
 # Welcome To Additional Resources!
 
-![alt text]( "screenshot")
+![alt text](https://github.com/ryanmokeefe/project-2/blob/master/public/img/screenshot.png "screenshot")
 
 ### Compile all the resources you need, in one spot!
 
@@ -10,19 +10,19 @@
 
 ### The Technology:
 
-Node
-Mongoose 
-MongoDB
-Express
-Heroku
-Handlebars
-Passport for authentication
-Materialize
+* Node
+* Mongoose 
+* MongoDB
+* Express
+* Heroku
+* Handlebars
+* Passport for authentication
+* Materialize
   
 ### The Resources: 
   
   Resources are sorted by 2 methods: Subject and Type. A user can add any subject to the resource as they create it, and may not be limited to Web Development alone. The type is used to specify whether the resource is an article, lesson or course, lecture, podcast, or documentation. Then, the user can note whether the resource has videos or exercises. Finally, the ability to vote up, or vote down, each resource will be added (at a later date) in order for users to help each other determine the usefulness of each addition.
-  Each resource can be displayed independantly by clicking the name, or the user can go straight to the website in question by clicking the url link included in the main page. Users can update information on the resource's page through a form, or remove the resource, if it's no longer needed. (*In future implementations, this delete functionality will be restricted to only authorized admins or the original creator of the post.)
+  Each resource can be displayed independantly by clicking the name, or the user can go straight to the website in question by clicking the url link included in the main page. Users can update information on the resource's page through a form, or remove the resource, if it's no longer needed. (*In future implementations, this delete functionality will be restricted to only authorized admins or the original creator of the post.*)
   
  ## Future Plans: 
   
