@@ -18,6 +18,11 @@ $('.carousel.carousel-slider').carousel({
 
 $(".dropdown-button").dropdown();
 
+
+$(document).ready(function(){
+    $('.materialboxed').materialbox();
+  });
+  
 /////////
 
 // $('#voteUp').on('click', () => {

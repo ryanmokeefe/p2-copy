@@ -1,32 +1,120 @@
 {{#if resource}}
 
+<table class="z-depth-5 highlight">
+    <thead>
+          <tr>
+            <th class="tableSingle"><div class="name"><h2>{{resource.name}}</h2></div></th>
+              {{!-- <th class="center">Rating</th>
+              <th class="center">Name</th>
+              <th class="center">Subject</th>
+              <th class="center">Website</th> --}}
+          </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>
+          <div class="url">
+            <a href="{{resource.url}}"><h4>{{resource.url}}</h4></a>
+          </div>
+        </td>        
+      </tr>
+      <tr>
+        <td>
+          <div class="subject">{{resource.subject}}</div>
+        </td>        
+      </tr>
+      <tr>
+        <td>
+          <div class="type">{{resource.type}}</div>
+        </td>       
+      </tr>
+      <tr>
+        <td>
+          <div class="videos">{{resource.videos}}</div>
+        </td>  
+      </tr>
+      <tr>
+        <td>
+          <div class="exercise">{{resource.exercises}}</div>
+        </td>  
+      </tr>
+      <tr>
+        <td class="voteButton">
+          <button id="voteUp">Like</button>
+          <button id="voteDown">Dislike</button>
+          <div class="votes">{{resource.votes}}</div>
+        </td>  
+      </tr>
 
-<main class="container">
-  <button id="voteUp">Like</button>
-  <button id="voteDown">Dislike</button>
-    <h2>{{resource.name}}</h2>
-    <p>{{resource.subject}}</p>
-    <p>{{resource.type}}</p>
-    <p>{{resource.videos}}</p>
-    <p>{{resource.exercises}}</p>
-    <p>{{resource.votes}}</p>
+    </tbody>
+  </table>
+
 
 {{else}}
     <h2>Couldn't find resource page.</h2>
 {{/if}}
-</main>
 
-<form action="/resources/{{resource.name}}?_method=put" method="post">
-  <input type="input" name="resource[name]" placeholder="Name" value="{{resource.name}}">
-  <input type="input" name="resource[subject]" placeholder="Subject" value="{{resource.subject}}">
-  <input type="input" name="resource[type]" placeholder="Lesson, Article, Lecture, Documentation, Podcast, etc" value="{{resource.type}}">
-  <input type="input" name="resource[videos]" placeholder="Videos? (Yes/No)" value="{{resource.videos}}">
-  <input type="input" name="resource[exercises]" placeholder="Exercises? (Yes/No)" value="{{resource.exercises}}">
+<h2 class="text-shadow center">Update This Resource</h2>
+<form class="col s12" action="/resources/{{resource.name}}?_method=put" method="post">
+  
+  <input class="input-field col s12" type="input" name="resource[name]" placeholder="Name" value="{{resource.name}}">
+  <input class="input-field col s12" type="input" name="resource[subject]" placeholder="Subject" value="{{resource.subject}}">
+  <input class="input-field col s12" type="input" name="resource[type]" placeholder="Lesson, Article, Lecture, Documentation, Podcast, etc" value="{{resource.type}}">
+  <input class="input-field col s12" type="input" name="resource[videos]" placeholder="Videos? (Yes/No)" value="{{resource.videos}}">
+  <input class="input-field col s12" type="input" name="resource[exercises]" placeholder="Exercises? (Yes/No)" value="{{resource.exercises}}">
 
-  <input type="submit" value="Edit Submission">
+  <input class="z-depth-5 submit" type="submit" value="Edit Submission">
 </form>
 
 
 <form action="/resources/{{resource.name}}?_method=delete" method="post">
   <input type="submit" value="Remove">
 </form>
+
+{{!--  --}}
+
+<div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s12">
+          <input placeholder="Placeholder" id="first_name" type="text" class="validate">
+          <label for="first_name">First Name</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s12">
+          <input disabled value="I am not editable" id="disabled" type="text" class="validate">
+          <label for="disabled">Disabled</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="password" type="password" class="validate">
+          <label for="password">Password</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="email" type="email" class="validate">
+          <label for="email">Email</label>
+        </div>
+      </div>
+
+
+
+
+
+      <div class="row">
+        <div class="col s12">
+          This is an inline input field:
+          <div class="input-field inline">
+            <input id="email" type="email" class="validate">
+            <label for="email" data-error="wrong" data-success="right">Email</label>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>

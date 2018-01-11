@@ -93,7 +93,5 @@ router.get('/', (req, res) => {
     })
     
     
-  // routes for user (from passport)
-    
     module.exports = router
     

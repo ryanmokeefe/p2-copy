@@ -9,3 +9,4 @@ Resource.remove({})
     .then(() => {
         process.exit
     })
+
