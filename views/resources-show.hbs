@@ -57,11 +57,12 @@
 <h2 class="text-shadow center">Update This Resource</h2>
 <form class="" action="/resources/{{resource.name}}?_method=put" method="post">
   
-  <input class="input-field row center" type="input" name="resource[name]" placeholder="Name" value="{{resource.name}}">
-  <input class="input-field row center" type="input" name="resource[subject]" placeholder="Subject" value="{{resource.subject}}">
-  <input class="input-field row center" type="input" name="resource[type]" placeholder="Lesson, Article, Lecture, Documentation, Podcast, etc" value="{{resource.type}}">
-  <input class="input-field row center" type="input" name="resource[videos]" placeholder="Videos? (Yes/No)" value="{{resource.videos}}">
-  <input class="input-field row center" type="input" name="resource[exercises]" placeholder="Exercises? (Yes/No)" value="{{resource.exercises}}">
+  <input class="input-field row center" type="text" name="resource[name]" placeholder="Name" value="{{resource.name}}">
+  <input class="input-field row center" type="text" name="resource[subject]" placeholder="Subject" value="{{resource.subject}}">
+  <input class="input-field row center" type="text" name="resource[type]" placeholder="Lesson, Article, Lecture, Documentation, Podcast, etc">
+  <input class="input-field row center" type="text" name="resource[videos]" placeholder="Videos? (Yes/No)">
+  <input class="input-field row center" type="text" name="resource[exercises]" placeholder="Exercises? (Yes/No)">
+  <input class="input-field row center" type="text" name="resource[url]" placeholder="Website">
 
   <input class="z-depth-5 submit updateButton" type="submit" value="Edit Submission">
 </form>
@@ -72,3 +73,5 @@
 </form>
 
 {{!--  --}}
+
+
