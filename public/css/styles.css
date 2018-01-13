@@ -98,8 +98,45 @@ tr:hover a {
 .tableSingle {
     text-align: center;
 }
+.infoRow {
+    height: 80px;
+}
+.infoRow h4 {
+    text-align: center;
+}
+/* .voteRow {
+    margin: 0 auto;
+} */
+/* .wholeRow {
+    width: 100%;
+} */
+.singleDesc {
+    width: 20%;
+    float: left;
+    font-size: 15px;
+}
+.singleInfo {
+    width: 100%;
+    font-size: 22px;
+    /* float: right; */
+}
 .voteButton {
+    color: #444;
     display: inline;
+    height: 40px;
+    width: 80px;
+    border-radius: 5px;
+}
+tr:hover .voteButton {
+    background-color: rgb(72, 167, 167);
+    color: white;
+}
+.voteButton:hover {
+    background-color: rgb(81, 207, 207) !important;
+    font-weight: 900;
+    border: 3px solid white;
+    text-shadow: 1px 1px 1px #222;    
+    /* box-shadow: 5px 5px 10px #444;     */
 }
 .submit {
     height: 50px;
@@ -157,4 +194,13 @@ tr:hover a {
     width: 50%;
     color: #444;
     margin: 20px auto;
+}
+
+.selections-box {
+    margin: 10px auto !important;
+}
+select {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 900;
 }

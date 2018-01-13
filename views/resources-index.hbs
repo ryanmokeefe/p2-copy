@@ -31,12 +31,36 @@
 
 <h2 class="text-shadow center">Upload Additional Resources</h2>
 <form action="/resources" method="post">
-    <input type="text" name="resource[name]" placeholder="Title" />
-    <input type="text" name="resource[subject]" placeholder="Subject" />
-    <input type="text" name="resource[url]" placeholder="Website Url" />
-    <input type="text" name="resource[Type]" placeholder="Lesson, Article, Lecture, Documentation, Podcast, etc." />
-    <input type="text" name="resource[videos]" placeholder="Videos? (Yes/No)" />
-    <input type="text" name="resource[exercises]" placeholder="Exercises? (Yes/No)" />
+    <input class="input-field row center" type="text" name="resource[name]" placeholder="Title" />
+    <input class="input-field row center" type="text" name="resource[subject]" placeholder="Subject" />
+    <input class="input-field row center" type="text" name="resource[url]" placeholder="Website Url" />
+{{!--  --}}
+
+    <select class="input-field row selections-box" name="resource[type]" >
+      <option value="" disabled selected>What type of link is this?:</option>
+      <option placeholder="Lesson" value="Lesson">Lesson</option>
+      <option placeholder="Article" value="Article">Article</option>
+      <option placeholder="Lecture" value="Lecture">Lecture</option>
+      <option placeholder="Documentation" value="Documentation">Documentation</option>
+      <option placeholder="Podcast" value="Podcast">Podcast</option>
+    </select>
+{{!--  --}}
+
+    <select class="input-field row selections-box" name="resource[videos]">
+      <option value="" disabled selected>Videos?</option>
+      <option placeholder="Yes" value="Yes">Yes</option>
+      <option placeholder="No" value="No">No</option>
+    </select>
+
+  {{!--  --}}
+
+    <select class="input-field row selections-box" name="resource[exercises]">
+      <option value="" disabled selected>Exercises?</option>
+      <option placeholder="Yes" value="Yes">Yes</option>
+      <option placeholder="No" value="No">No</option>
+    </select>
+
+{{!--  --}}
 
 
     <input class="z-depth-5 submit" type="submit" value="Upload Resource" />

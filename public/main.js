@@ -22,8 +22,12 @@ $(".dropdown-button").dropdown();
 $(document).ready(function(){
     $('.materialboxed').materialbox();
   });
-  
+
 /////////
+
+// $('.voteButton').hover(() => {
+//     $(this).toggleClass('z-depth-5')
+// } )
 
 // $('#voteUp').on('click', () => {
 //     var resource = $('resource.votes')

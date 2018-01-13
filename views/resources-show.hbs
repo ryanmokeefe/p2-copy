@@ -13,36 +13,63 @@
       <tbody>
       <tr>
         <td>
-          <div class="url">
+          <div class="infoRow url">
             <a href="{{resource.url}}"><h4>{{resource.url}}</h4></a>
           </div>
         </td>        
       </tr>
       <tr>
-        <td>
-          <div class="subject">{{resource.subject}}</div>
+        <td class="infoRow">
+
+          {{!-- <div class="wholeRow subject"> --}}
+            <p class="singleInfo">
+              <span class="singleDesc">Subject:</span>
+              {{resource.subject}}
+           </p>
+          {{!-- </div> --}}
         </td>        
       </tr>
       <tr>
-        <td>
-          <div class="type">{{resource.type}}</div>
+        
+        <td class="infoRow">
+          <div class="wholeRow type">
+            <p class="singleInfo">
+              <span class="singleDesc">Type:</span>
+              {{resource.type}}
+           </p>
+          </div>
         </td>       
       </tr>
       <tr>
-        <td>
-          <div class="videos">{{resource.videos}}</div>
+
+        <td class="infoRow">
+          <div class="wholeRow videos">
+            <p class="singleInfo">
+              <span class="singleDesc">Videos:</span>
+              {{resource.videos}}
+            </p>
+          </div>
         </td>  
       </tr>
       <tr>
-        <td>
-          <div class="exercise">{{resource.exercises}}</div>
+
+        <td class="infoRow">
+          <div class="wholeRow exercise">
+            <p class="singleInfo">
+              <span class="singleDesc">Exercises:</span>
+              {{resource.exercises}}
+           </p>
+          </div>
         </td>  
       </tr>
       <tr>
-        <td class="voteButton">
-          <button id="voteUp">Like</button>
-          <button id="voteDown">Dislike</button>
+        <td class="infoRow">
+          <div class="center">
+            <button id="voteUp" class="voteButton z-depth-3">Like</button>
+            <button id="voteDown" class="voteButton z-depth-3">Dislike</button>
+          </div>
           <div class="votes">{{resource.votes}}</div>
+
         </td>  
       </tr>
 
@@ -59,12 +86,40 @@
   
   <input class="input-field row center" type="text" name="resource[name]" placeholder="Name" value="{{resource.name}}">
   <input class="input-field row center" type="text" name="resource[subject]" placeholder="Subject" value="{{resource.subject}}">
-  <input class="input-field row center" type="text" name="resource[type]" placeholder="Lesson, Article, Lecture, Documentation, Podcast, etc">
-  <input class="input-field row center" type="text" name="resource[videos]" placeholder="Videos? (Yes/No)">
-  <input class="input-field row center" type="text" name="resource[exercises]" placeholder="Exercises? (Yes/No)">
-  <input class="input-field row center" type="text" name="resource[url]" placeholder="Website">
+{{!--  --}}
+  <input class="input-field row center" type="text" name="resource[url]" placeholder="Website" value="{{resource.url}}">
+{{!--  --}}
 
+    {{!-- <label class="center selections-label">Type:</label> --}}
+    <select class="input-field row selections-box" name="resource[type]" >
+      <option value="" disabled selected>What type of resource is this?:</option>
+      <option placeholder="Lesson" value="Lesson">Lesson</option>
+      <option placeholder="Article" value="Article">Article</option>
+      <option placeholder="Lecture" value="Lecture">Lecture</option>
+      <option placeholder="Documentation" value="Documentation">Documentation</option>
+      <option placeholder="Podcast" value="Podcast">Podcast</option>
+    </select>
+{{!--  --}}
+
+    {{!-- <label class="center selections-label">Videos?:</label> --}}
+    <select class="input-field row selections-box" name="resource[videos]">
+      <option value="" disabled selected>Videos?</option>
+      <option placeholder="Yes" value="Yes">Yes</option>
+      <option placeholder="No" value="No">No</option>
+    </select>
+
+  {{!--  --}}
+
+    {{!-- <span class="center-align selections-label">Exercises?:</span> --}}
+    <select class="input-field row selections-box" name="resource[exercises]">
+      <option value="" disabled selected>Exercises?</option>
+      <option placeholder="Yes" value="Yes">Yes</option>
+      <option placeholder="No" value="No">No</option>
+    </select>
+
+{{!--  --}}
   <input class="z-depth-5 submit updateButton" type="submit" value="Edit Submission">
+
 </form>
 
 
@@ -73,5 +128,4 @@
 </form>
 
 {{!--  --}}
-
 
