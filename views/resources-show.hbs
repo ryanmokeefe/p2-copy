@@ -1,5 +1,5 @@
 {{#if resource}}
-
+{{!-- <div class="row"> --}}
 <table class="z-depth-5 highlight">
     <thead>
           <tr>
@@ -82,7 +82,7 @@
 {{/if}}
 
 <h2 class="text-shadow center">Update This Resource</h2>
-<form class="" action="/resources/{{resource.name}}?_method=put" method="post">
+<form class="col s12 m6" action="/resources/{{resource.name}}?_method=put" method="post">
   
   <input class="input-field row center" type="text" name="resource[name]" placeholder="Name" value="{{resource.name}}">
   <input class="input-field row center" type="text" name="resource[subject]" placeholder="Subject" value="{{resource.subject}}">
@@ -126,6 +126,6 @@
 <form action="/resources/{{resource.name}}?_method=delete" method="post">
   <input class="deleteButton submit" type="submit" value="Remove">
 </form>
-
+{{!-- </div> --}}
 {{!--  --}}
 
