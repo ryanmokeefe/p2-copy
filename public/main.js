@@ -16,12 +16,35 @@ $('.carousel.carousel-slider').carousel({
   });
 // $('#grid .row:nth-child(odd)').addClass('alternate');
 
-$(".dropdown-button").dropdown();
+$('.dropdown-button').dropdown();
 
 
 $(document).ready(function(){
     $('.materialboxed').materialbox();
   });
+
+
+
+// switch fullscreen and mobile views
+
+if ($(window).width() < 600) {
+    $('.fullscreen').addClass('hidden')
+    $('.showMobile').removeClass('hidden')
+} else if ($(window).width() > 599) {
+    $('.fullscreen').removeClass('hidden')
+    $('.showMobile').addClass('hidden')
+
+}
+
+$(window).resize(function() {
+/*If browser resized, check width again */
+    if ($(window).width() < 600) {
+        $('.fullscreen').addClass('hidden')
+        $('.showMobile').removeClass('hidden')    }
+    else if ($(window).width() > 599) {
+        $('.fullscreen').removeClass('hidden')
+        $('.showMobile').addClass('hidden')    }
+});
 
 /////////
 

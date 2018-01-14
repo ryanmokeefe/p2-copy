@@ -1,63 +1,131 @@
+/* mobile: */
 
-body {
-    background: rgb(41, 41, 41);
-    color: whitesmoke;
-    margin: 0 0 50px 0;
-    display: block;
+    body {
+        background: rgb(41, 41, 41);
+        color: whitesmoke;
+        margin: 0 0 50px 0;
+        display: block;
+    
+    }
+    /* .fullscreen {
 
-}
+    }
+    .showMobile {
 
-/* nav bar */
+    } */
+    .hidden {
+        /* use $('.hide') to find and attach .hidden */
+        display: none;
+        
+    }
+    /* nav bar */
+    
+    .nav-left {
+        display: inline;
+    }
+    nav {
+        background-color: rgb(72, 167, 167);
+        margin: 0;
+        padding: 0;
+    }
+    .brand-logo {
+        margin: 0 10px;
+    }
+    .header-ar {
+        margin: 0 20px;
+    }
+    /* .bracket1 {
+        font-size: 30px
+    } */
+    .bracket {
+        font-size: 40px;
+    }
+    .nav-wrapper a {    
+        height: 50px !important;
+    }
+    .nav-content {
+        height: 40px;
+    }
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+    nav a {
+        margin: 0;
+        padding: 0;
+    }
+    a {
+        /* color: rgb(248, 235, 210); */
+        color: rgb(72, 167, 167);
+    }
+    .nav-bottom a {
+        padding: 10px 20px 15px 20px;
+    }
+    .nav-wrapper h1 {
+        /* background-color: #111; */
+        margin: 0 auto;
+        font-size: 30px;
+    }
+    
+    /* end nav */
 
-.nav-left {
-    display: inline;
-}
-nav {
-    background-color: rgb(72, 167, 167);
-    margin: 0;
-    /* height: 200px !important; */
-    padding: 0;
-}
-.brand-logo {
-    margin: 0 10px;
-}
-.header-ar {
-    margin: 0 20px;
-}
-/* .bracket1 {
-    font-size: 30px
-} */
-.bracket {
-    font-size: 40px;
-}
-.nav-wrapper a {    
-    height: 50px !important;
-}
-.nav-content {
-    height: 40px;
-}
-ul {
-    margin: 0;
-    padding: 0;
-}
-nav a {
-    margin: 0;
-    padding: 0;
-}
-a {
-    /* color: rgb(248, 235, 210); */
-    color: rgb(72, 167, 167);
-}
-.nav-bottom a {
-    padding: 10px 20px 15px 20px;
-}
-.nav-wrapper h1 {
-    /* background-color: #111; */
-    margin: 0 auto;
-    font-size: 30px;
-}
+    td {
+        padding: 0 0 0 20px;
+    }
+    table {
+        margin: 50px auto;
+        letter-spacing: 1px;
+    }
+    .tableSingle {
+        text-align: center;
+    }
+    .infoRow {
+        height: 80px;
+    }
+    .infoRow h4 {
+        text-align: center;
+    }
 
-/* end nav */
+    .selections-box {
+        margin: 10px auto !important;
+    }
+    select {
+        text-align: center;
+        font-size: 20px;
+        font-weight: 900;
+    }
+    input:focus {
+        color: white;
+    }
+    .voteButton {
+        color: #444;
+        display: inline;
+        height: 40px;
+        width: 80px;
+        border-radius: 5px;
+    }
+    .submit {
+        height: 50px;
+        width: 70%;
+        color: #444;
+        margin: 5% auto;
+        background-color: #eee;
+        font-weight: 900;
+        font-size: 20px;
+    }
+    .text-shadow {
+        text-shadow: 2px 2px 2px #111;
+    }
+    .row {
+        display: block;
+        height: 80px;
+        width: 100%;
+        color: #444;
+        margin: 20px auto;
+    }
+    
+@media screen and (min-width: 600px) {
+/* fullscreen: */
 
 h2 {
     font-size: 30px;
@@ -72,19 +140,9 @@ h4 {
    height: 80px; 
    border: 1px solid black;
    object-fit: contain;
-   /* overflow: auto; */
-/* } */ 
-td {
-    padding: 0 0 0 20px;
-}
-table {
-    margin: 50px auto;
-    letter-spacing: 1px;
-    /* padding: 20px; */
-}
-/* table.striped tr {
-    background-color: #444 !important;
-} */
+   overflow: auto;
+}  */
+
 tr:nth-child(odd)		{ background-color:#222; }
 tr:nth-child(even)		{ background-color:#555; }
 table.highlight tbody tr:hover {
@@ -95,15 +153,7 @@ tr:hover a {
     color: #444;
     font-weight: 900;
 }
-.tableSingle {
-    text-align: center;
-}
-.infoRow {
-    height: 80px;
-}
-.infoRow h4 {
-    text-align: center;
-}
+
 /* .voteRow {
     margin: 0 auto;
 } */
@@ -120,13 +170,7 @@ tr:hover a {
     font-size: 22px;
     /* float: right; */
 }
-.voteButton {
-    color: #444;
-    display: inline;
-    height: 40px;
-    width: 80px;
-    border-radius: 5px;
-}
+
 tr:hover .voteButton {
     background-color: rgb(72, 167, 167);
     color: white;
@@ -139,21 +183,14 @@ tr:hover .voteButton {
     /* box-shadow: 5px 5px 10px #444;     */
 }
 .submit {
-    height: 50px;
     width: 30%;
-    color: #444;
     margin: 15px 35%;
-    background-color: #eee;
-    font-weight: 900;
-    font-size: 20px;
 }
 .submit:hover {
     background-color: #444;
     color: #eee;
 }
-.text-shadow {
-    text-shadow: 2px 2px 2px #111;
-}
+
 /* carousel */
 
 .carousel {
@@ -196,35 +233,6 @@ tr:hover .voteButton {
     margin: 20px auto;
 }
 
-.selections-box {
-    margin: 10px auto !important;
-}
-select {
-    text-align: center;
-    font-size: 20px;
-    font-weight: 900;
-}
-input:focus {
-    color: white;
-}
-
 /*  */
+}
 
-
-
-/* @media screen and (max-width: 480px) {
-    body {
-        background-color: lightgreen;
-  
-    }
-    nav {
-        width: 100%;
-    }
-    .row {
-        width: 80%;
-        margin: 10px;
-    }
-    .submit {
-        width: 50%;
-    }
-} */
