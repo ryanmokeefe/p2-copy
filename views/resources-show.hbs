@@ -88,7 +88,7 @@
           <p>{{resource.subject}}</p>
           <p>{{resource.type}}</p>
 
-{{!-- {{#if this videos="Yes"}} --}}
+{{!-- * only display each if present * {{#if this videos="Yes"}} --}}
           <p>Videos <span>:</span> {{resource.videos}}</p>
           <p>Exersices <span>:</span> {{resource.exercises}}</p>
 {{!-- {{/if}} --}}
@@ -101,12 +101,9 @@
     </div>
   </div>
 </div>
-{{!-- 
-  {{else}}
-    <h2>Couldn't find resource page.</h2>
-  {{/if}} 
---}}
+
 {{!--  --}}
+
 <h2 class="text-shadow center">Update This Resource</h2>
 <form class="col s12 m6" action="/resources/{{resource.name}}?_method=put" method="post">
   
@@ -114,9 +111,9 @@
   <input class="input-field row center" type="text" name="resource[subject]" placeholder="Subject" value="{{resource.subject}}">
 {{!--  --}}
   <input class="input-field row center" type="text" name="resource[url]" placeholder="Website" value="{{resource.url}}">
+
 {{!--  --}}
 
-    {{!-- <label class="center selections-label">Type:</label> --}}
     <select class="input-field row selections-box" name="resource[type]" >
       <option value="" disabled selected>What type of resource is this?:</option>
       <option placeholder="Lesson" value="Lesson">Lesson</option>
@@ -127,7 +124,6 @@
     </select>
 {{!--  --}}
 
-    {{!-- <label class="center selections-label">Videos?:</label> --}}
     <select class="input-field row selections-box" name="resource[videos]">
       <option value="" disabled selected>Videos?</option>
       <option placeholder="Yes" value="Yes">Yes</option>
@@ -136,7 +132,6 @@
 
   {{!--  --}}
 
-    {{!-- <span class="center-align selections-label">Exercises?:</span> --}}
     <select class="input-field row selections-box" name="resource[exercises]">
       <option value="" disabled selected>Exercises?</option>
       <option placeholder="Yes" value="Yes">Yes</option>

@@ -31,21 +31,6 @@ router.get('/', (req, res) => {
     })
 })
   
-//   router.route('/signup')
-//   .get(usersController.getSignup)
-//   .post(usersController.postSignup)
-  
-//   router.route('/login')
-//   .get(usersController.getLogin)
-//   .post(usersController.postLogin)
-  
-//   router.route("/logout")
-//   .get(usersController.getLogout)
-  
-//   // adds route for profile page IF user is authenticated:
-//   router.route("/profile")
-//   .get(authenticatedUser, usersController.profile)
-
   // get one by name:
   router.get('/:name', (req, res) => {
       let name = req.params.name

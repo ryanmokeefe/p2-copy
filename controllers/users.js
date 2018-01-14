@@ -1,4 +1,5 @@
 const router = require('express').Router()
+const User = require('../models/user-schema')
 
 // all from passport lesson
 
@@ -20,7 +21,7 @@ function authenticatedUser(req, res, next) {
   if (req.isAuthenticated()) return next();
 
   // Otherwise the request is always redirected to the home page
-  res.redirect('/');
+  res.redirect('/login');
 }
 
 // adds route for profile page IF user is authenticated:
@@ -69,7 +70,40 @@ function getLogout(req, res) {
 // Restricted page
 function profile(req, res){
   res.render("profile.hbs");
+
 }
+
+
+// router.get('/', (req, res) => {
+//   Resource.find({})
+//   .then((resource) => {
+//       // show all
+//       res.render('resources-index', {
+//           resources: resource
+//       })
+//   })
+//   .catch((err) => {
+//       console.log(err)
+//   })
+// })
+
+// 
+// router.get('/:name', (req, res) => {
+//   let name = req.params.name
+//   Resource.findOne({name: req.params.name})
+//   .then((resource) => {
+//       res.render('resources-show', {
+//           resource: resource
+//         })
+//     })
+//     .catch((err) => {
+//         console.log(err)
+//     })
+// })
+
+// 
+
+
 
 // module.exports = {
 //   getLogin: getLogin,

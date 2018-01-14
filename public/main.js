@@ -46,7 +46,7 @@ $(window).resize(function() {
         $('.showMobile').addClass('hidden')    }
 });
 
-arr404 = ["../assets/gar/gar3.png", "../assets/gar/gar4.png", "../assets/gar/gar5.png", "../assets/gar/gar6.png", "../assets/gar/gar9.png", "../assets/gar/gar10.png", "../assets/gar/gar11.png", "../assets/gar/gar12.png", "../assets/gar/gar13.png", "../assets/gar/gar14.png", "../assets/gar/gar15.png"]
+arr404 = ["../assets/gar/gar3.png", "../assets/gar/gar5.png", "../assets/gar/gar6.png", "../assets/gar/gar9.png", "../assets/gar/gar10.png", "../assets/gar/gar11.png", "../assets/gar/gar12.png", "../assets/gar/gar13.png", "../assets/gar/gar14.png", "../assets/gar/gar15.png"]
 
 // 
 
