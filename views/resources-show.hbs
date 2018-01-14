@@ -87,20 +87,26 @@
             </h4> 
           <p>{{resource.subject}}</p>
           <p>{{resource.type}}</p>
-          <p>Videos: {{resource.videos}}</p>
-          <p>Exersices: {{resource.exercises}}</p>
+
+{{!-- {{#if this videos="Yes"}} --}}
+          <p>Videos <span>:</span> {{resource.videos}}</p>
+          <p>Exersices <span>:</span> {{resource.exercises}}</p>
+{{!-- {{/if}} --}}
         </div>
-        <div class="card-action">
-          <a href="{{resource.url}}">{{resource.url}}</a>
-        </div>
+
+            <div class="card-action">
+              <a href="{{resource.url}}">{{resource.url}}</a>
+            </div>
       </div>
     </div>
   </div>
 </div>
-{{else}}
+{{!-- 
+  {{else}}
     <h2>Couldn't find resource page.</h2>
-{{/if}}
-
+  {{/if}} 
+--}}
+{{!--  --}}
 <h2 class="text-shadow center">Update This Resource</h2>
 <form class="col s12 m6" action="/resources/{{resource.name}}?_method=put" method="post">
   
@@ -149,5 +155,9 @@
 </form>
 
 {{!-- </div> --}}
-{{!--  --}}
+
+{{else}}
+    <h2 class="h2404">Couldn't find resource page.</h2>
+    <div class="img404"></div>
+{{/if}}
 
