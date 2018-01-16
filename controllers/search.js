@@ -85,7 +85,7 @@ router.get('/podcasts', (req, res) => {
 
 // lessons: 
 router.get('/lessons', (req, res) => {
-    Resource.find({ type: "Lessons"})
+    Resource.find({ type: "Lesson"})
     .then((resource) => {
         res.render('resources-index', {
             resources: resource
