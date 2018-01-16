@@ -21,7 +21,7 @@ router.get('/videos', (req, res) => {
 // find all exercises: 
 
 router.get('/exercises', (req, res) => {
-    Resource.find({ exercises: "Yes"})
+    Resource.find({exercises: "yes"})
     .then((resource) => {
         res.render('resources-index', {
             resources: resource
