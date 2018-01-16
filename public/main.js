@@ -52,8 +52,9 @@ arr404 = ["../assets/gar/gar3.png", "../assets/gar/gar5.png", "../assets/gar/gar
 
 $('.img404').css('background-image', "url('" + arr404[Math.floor(Math.random() * arr404.length)], + "')")
 
+// jquery for materialize dropmenu
 
-console.log($('.img404').css('background-image'))
+
 /////////
 
 // $('.voteButton').hover(() => {

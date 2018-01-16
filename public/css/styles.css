@@ -112,7 +112,7 @@ input:focus {
 }
 .enterButton{
     margin: 0 auto;
-    padding 0;
+    padding: 0;
 }
 .text-shadow {
     text-shadow: 2px 2px 2px #111;
@@ -212,6 +212,32 @@ h2 {
     background-repeat: no-repeat;
     background-position: center;
     margin: 100px auto;
+}
+/* nav searches */
+
+.searchSelect {
+    background-color: white;
+}
+.searchBox {
+    position: relative;
+    bottom: 10px;
+    float: right;
+    height: 50px;
+    width: 250px;
+    background-color: rgba(0, 0, 0, .2);
+    padding: 0;
+}
+.searchBoxInput {
+    padding: 0 50px;
+    text-align: center;
+}
+.searchBoxInput:focus {
+    background-color: white !important;
+    color: #777;
+}
+.searchBtn {
+    position: relative;
+    bottom: 25px;
 }
 
 @media screen and (min-width: 600px) {

@@ -15,6 +15,21 @@ router.route('/login')
 router.route("/logout")
 .get(getLogout)
 
+//////////// find all videos: 
+
+// router.get('/search/video', (req, res) => {
+//   Resource.find({ videos: "Yes"})
+//   .then((resource) => {
+//       res.render('resources-index', {
+//           resources: resource
+//       })
+//   })
+//   .catch((err) => {console.log(err)
+//   })
+// })
+
+
+
 // function for authenticated user:
 function authenticatedUser(req, res, next) {
   // If the user is authenticated, then we continue the execution

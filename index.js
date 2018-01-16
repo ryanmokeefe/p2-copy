@@ -11,6 +11,7 @@ var morgan       = require('morgan');
 var cookieParser = require('cookie-parser');
 var session      = require('express-session');
 const userController = require('./controllers/users.js')
+const searchController = require('./controllers/search.js')
 
 app.use(morgan('dev')); 
 app.use(cookieParser());
@@ -49,6 +50,7 @@ app.get('/', (req, res) => {
 })
 
 app.use('/resources', controller)
+app.use('/search', searchController)
 app.use('/', userController)
 
 // const io = require('socket.io').listen(server);

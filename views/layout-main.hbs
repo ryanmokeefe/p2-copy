@@ -18,12 +18,11 @@
 
     <nav class="nav-extended">
               
-                <div class="nav-wrapper">
-                  <div class="nav-left left">
-                    <a href="#!" class="brand-logo">AR[ ]</a>
-                    <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-
-                  </div>        
+        <div class="nav-wrapper">
+          <div class="nav-left left">
+            <a href="#!" class="brand-logo">AR[ ]</a>
+              <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+          </div>        
           <ul class="right hide-on-med-and-down">
             {{#if currentUser}}
               <li><a href="/logout">Logout {{currentUser.local.email}}</a></li>
@@ -55,11 +54,53 @@
 
         <div class="nav-content">
           <ul class="">
-            <li class="nav-bottom"><a href="#test1">Test 1</a></li>
-            <li class="nav-bottom"><a class="active" href="#test2">Test 2</a></li>
-            <li class="nav-bottom"><a href="#test3">Disabled Tab</a></li>
-            <li class="nav-bottom"><a href="#test4">Test 4</a></li>
+            <li class="nav-bottom">
+              <a href="/#">
+      {{!-- 1. dropdown menu for search --}}
+                <a id="navMenu1" class='dropdown-button searchBtn' href='#' data-activates='dropdown1'>Sort by:</a>
+                  <!-- Dropdown Structure -->
+                  <ul id='dropdown1' class='dropdown-content'>
+                    <li><a href="/search/videos">Videos</a></li>
+                    <li><a href="/search/exercises">Exercises</a></li>
+                    <li><a href="/search/both">Both</a></li>
+                    <li class="divider"></li>
+                    <li><a href="/resources">All</a></li>
+                  </ul>
+              </a>
+            </li>
+      {{!-- 2. dropdown for search: type --}}
+            <li class="nav-bottom">
+              <a class="active" href="#2">
+                <a id="navMenu2" class='dropdown-button searchBtn' href='2' data-activates='dropdown2'>Find by type:</a>
+                  <!-- Dropdown Structure -->
+                  <ul id='dropdown2' class='dropdown-content'>
+                    <li><a href="/search/articles">Articles</a></li>
+                    <li><a href="/search/lessons">Lessons</a></li>
+                    <li><a href="/search/documentation">Documentation</a></li>
+                    <li><a href="/search/podcasts">Podcasts</a></li>
+                    <li><a href="/search/lectures">Lectures</a></li>
+                  </ul>                
+              </a>
+            </li>
+
+      {{!-- 3. nav tab tbd --}}
+            <li class="nav-bottom"><a href="#test3">
+              
+              </a>
+            </li>
+
+      {{!-- 4. nav tab tbd --}}
+            <li class="nav-bottom">
+
+            </li>
           </ul>
+          
+    {{!-- search bar: --}}
+          <div class="searchBox">
+            <input action="/search" class="searchBoxInput" type="text" placeholder="Search site">
+
+          </div>
+
         </div>
       </nav>
 
