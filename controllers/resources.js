@@ -22,9 +22,7 @@ router.get('/', (req, res) => {
     Resource.find({})
     .then((resource) => {
         // show all
-        res.render('resources-index', {
-            resources: resource
-        })
+        res.json(resource)
     })
     .catch((err) => {
         console.log(err)

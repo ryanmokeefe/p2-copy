@@ -15,20 +15,6 @@ router.route('/login')
 router.route("/logout")
 .get(getLogout)
 
-//////////// find all videos: 
-
-// router.get('/search/video', (req, res) => {
-//   Resource.find({ videos: "Yes"})
-//   .then((resource) => {
-//       res.render('resources-index', {
-//           resources: resource
-//       })
-//   })
-//   .catch((err) => {console.log(err)
-//   })
-// })
-
-
 
 // function for authenticated user:
 function authenticatedUser(req, res, next) {
@@ -88,45 +74,5 @@ function profile(req, res){
 
 }
 
-
-// router.get('/', (req, res) => {
-//   Resource.find({})
-//   .then((resource) => {
-//       // show all
-//       res.render('resources-index', {
-//           resources: resource
-//       })
-//   })
-//   .catch((err) => {
-//       console.log(err)
-//   })
-// })
-
-// 
-// router.get('/:name', (req, res) => {
-//   let name = req.params.name
-//   Resource.findOne({name: req.params.name})
-//   .then((resource) => {
-//       res.render('resources-show', {
-//           resource: resource
-//         })
-//     })
-//     .catch((err) => {
-//         console.log(err)
-//     })
-// })
-
-// 
-
-
-
-// module.exports = {
-//   getLogin: getLogin,
-//   postLogin: postLogin,
-//   getSignup: getSignup,
-//   postSignup: postSignup,
-//   getLogout: getLogout,
-//   profile: profile
-// }
 
 module.exports = router

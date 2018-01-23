@@ -12,9 +12,12 @@ var cookieParser = require('cookie-parser');
 var session      = require('express-session');
 const userController = require('./controllers/users.js')
 const searchController = require('./controllers/search.js')
+const cors = require('cors')
 
 app.use(morgan('dev')); 
 app.use(cookieParser());
+app.use(cors());
+
 // app.use(parser()); 
 
 app.use(methodOverride('_method'))
